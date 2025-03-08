@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'KATURI'; /* (주석) 우리가 사용할 이름(별칭) */
+  src: url('KATURI.TTF') format('truetype');
+  /* 필요 시 woff, woff2 등 여러 포맷 추가 가능 */
+  font-weight: normal;
+  font-style: normal;
+
+}
+/* 전체 폰트, 중앙 정렬 */
+body {
+    font-family: 'KATURI', 'NanumSquareRound', sans-serif;
+    margin: 20px;
+    text-align: center;
+  }
+/* (1) 버튼·입력 요소에도 폰트 지정 */
+button, input, select, textarea {
+  font-family: 'KATURI', 'NanumSquareRound', sans-serif !important;
+  /* !important는 다른 스타일과 충돌 시 우선순위 보장 */
+}
+
+/* (2) 필요하다면 툴바와 라벨 등도 한번에 적용 */
+.toolbar, label, #clearCanvasBtn, #saveBtn, #galleryBtn {
+  font-family: 'KATURI', 'NanumSquareRound', sans-serif !important;
+}
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* 상단 도구 모음 */
+  .toolbar {
+    margin-bottom: 10px;
+  }
+  
+  .toolbar img {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  /* 팔레트 버튼 클릭 시 표시되는 컬러 피커 */
+  #colorPicker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  /* 브러시 사이즈 조절 슬라이더 */
+  #brushSizeRange {
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  #clearCanvasBtn {
+    vertical-align: middle;
+    padding: 6px 12px;
+    margin-left: 10px;
+  }
+  #saveBtn,
+  #galleryBtn {
+    vertical-align: middle; /* 동일한 세로 정렬 */
+    padding: 6px 12px;      /* clearCanvasBtn과 동일한 padding */
+    margin-left: 10px; 
+    margin-top: 10px 
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px; /* 크기 조정 가능 */
+    height: auto;
+  }
+
+  #gallery {
+      margin-top: 20px;
+  }
+  /* 갤러리 팝업 */
+  #galleryPopup {
+    width: 500px;
+    height: 400px;
+    overflow-y: auto;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* 갤러리 이미지 스타일 */
+  #gallery img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid black;
+  }
+  /* 갤러리 내 이미지 삭제 버튼 */
+.delete-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: #f44336; /* 빨간색(예시) */
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  }
+
+  /* 그림을 그릴 캔버스 */
+  #myCanvas {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+    touch-action: none; /* 모바일에서 터치 스크롤 방지 */
+  }

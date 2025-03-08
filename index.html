@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <title>The PROSUMER 그림판</title> -->
+  <!-- 외부 CSS 파일 연결 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- <h1>The PROSUMER 그림판</h1> -->
+
+  <!-- 도구 모음 -->
+  <div class="toolbar">
+    <!-- 브러시 버튼 (이미지) -->
+    <img src="brush.png" alt="Brush" id="brushTool" title="브러시" />
+
+    <!-- 팔레트 버튼 (이미지) -->
+    <img src="palette.png" alt="Palette" id="paletteTool" title="팔레트 열기" />
+    <!-- 실제 색 선택용 input (기본은 숨김) -->
+    <input type="color" id="colorPicker" value="#000000" style="display:none;" />
+
+    <!-- 지우개 버튼 (이미지) -->
+    <img src="eraser.png" alt="Eraser" id="eraserTool" title="지우개" />
+
+    <!-- 브러시 사이즈 조절 슬라이더 -->
+    <label for="brushSizeRange">브러시 크기:</label>
+    <input type="range" id="brushSizeRange" min="1" max="30" value="5" />
+
+    <!-- 전체 지우기 버튼 -->
+    <button id="clearCanvasBtn">캔버스 비우기</button>
+  </div>
+
+  <!-- 그림을 그릴 캔버스 -->
+  <canvas id="myCanvas" width="800" height="600"></canvas>
+ 
+  <button id="saveBtn">그림 저장</button>
+  <button id="galleryBtn">갤러리</button>
+  
+  <div id="popup" class="popup">
+    <p>1번 작업실 태블릿으로 이동해주세요!</p>
+    <button id="closePopup">확인</button>
+</div>
+
+<!-- 갤러리 -->
+<div id="galleryPopup" class="popup">
+  <h2>저장된 그림</h2>
+  <div id="gallery"></div>
+  <button id="closeGallery">닫기</button>
+</div>
+
+  <!-- 외부 JS 파일 연결 -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>그림판</title>
+  <!-- NanumSquareRound 웹폰트 -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquareRound@1.0/nanumsquareround.min.css"
+  />
+  <!-- 나머지 CSS 링크, etc. -->
+  <link rel="stylesheet" href="style.css" />
+
+
+
